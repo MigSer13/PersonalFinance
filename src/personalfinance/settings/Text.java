@@ -28,7 +28,7 @@ final public class Text {
     }
 
     public static void init() {
-        data.put("PROFRAMM_NAME", "Домашняя бухгалтерия");
+        data.put("PROGRAMM_NAME", "Домашняя бухгалтерия");
         data.put("MENU_FILE", "Файл");
         data.put("MENU_EDIT", "Правка");
         data.put("MENU_VIEW", "Вид");
@@ -46,5 +46,19 @@ final public class Text {
         data.put("OCTOBER", "Октябрь");
         data.put("NOVEMBER", "Ноябрь");
         data.put("DECEMBER", "Декабрь");
+
+        data.put("ERROR_TITLE_EMPTY", "Вы не ввели название");
+        data.put("ERROR_IS_EXIST", "Такая запмсь уже существует");
+        data.put("ERROR_DATE_FORMAT", "Некорректный формат даты");
+        data.put("ERROR_CODE_EMPTY", "Вы не указали код");
+        data.put("ERROR_CURRENCY_EMPTY", "Вы не выбрали валюту");
+        data.put("ERROR_ARTICLE_EMPTY", "Вы не выбрали статью");
+        data.put("ERROR_ACCOUNT_EMPTY", "Вы не выбрали счет");
+        data.put("ERROR_RATE_INCORRECT", "Некорректное значение курса");
+        data.put("ERROR_AMOUNT_FORMAT", "Некорректный формат суммы");
+        data.put("ERROR_NO_BASE_CURRENCY", "Необходимы базовая валюта."
+                                        + " Установите сначала этот параметр в другой валюте,"
+                                        + "  потом он снимется в этой автоматически.");
+
     }
 }

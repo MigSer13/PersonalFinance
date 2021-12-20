@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c0aa677-9733-4588-b16e-043dda324276" name="Changes" comment="" />
+    <list default="true" id="9c0aa677-9733-4588-b16e-043dda324276" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/personalfinance/exception/ModelException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/personalfinance/model/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/personalfinance/model/Article.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/personalfinance/model/Common.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/personalfinance/model/Currency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/personalfinance/model/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/personalfinance/model/Transfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/personalfinance/settings/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/personalfinance/settings/Text.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +24,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="22Vlt065gS5qOd34jOBiYV74CpH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -35,5 +49,16 @@
       <updated>1639930855877</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
