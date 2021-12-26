@@ -8,13 +8,13 @@ public class Currency extends Common{
     private String title;
     private String code;
     private double rate;
-    private boolean isOn;
-    private boolean isBase;
+    private boolean on;
+    private boolean base;
 
     public Currency() {
     }
 
-    public Currency(String title, String code, double rate, boolean isOn, boolean isBase) throws ModelException {
+    public Currency(String title, String code, double rate, boolean on, boolean base) throws ModelException {
         if(title.isEmpty()){
             throw new ModelException(ModelException.TITLE_EMPTY);
         }
@@ -27,8 +27,8 @@ public class Currency extends Common{
         this.title = title;
         this.code = code;
         this.rate = rate;
-        this.isOn = isOn;
-        this.isBase = isBase;
+        this.on = on;
+        this.base = base;
     }
 
     public String getTitle() {
@@ -56,19 +56,19 @@ public class Currency extends Common{
     }
 
     public boolean isOn() {
-        return isOn;
+        return on;
     }
 
     public void setOn(boolean on) {
-        isOn = on;
+        this.on = on;
     }
 
     public boolean isBase() {
-        return isBase;
+        return base;
     }
 
     public void setBase(boolean base) {
-        isBase = base;
+        this.base = base;
     }
 
     @Override
@@ -77,8 +77,8 @@ public class Currency extends Common{
                 "title='" + title + '\'' +
                 ", code='" + code + '\'' +
                 ", rate=" + rate +
-                ", isOn=" + isOn +
-                ", isBase=" + isBase +
+                ", isOn=" + on +
+                ", isBase=" + base +
                 '}';
     }
 

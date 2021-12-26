@@ -7,7 +7,12 @@ final public class Text {
     private static final HashMap<String, String> data = new HashMap<>();
 
     public static String get(String key) {
-        return data.get(key);
+        if (data.containsKey(key)) {
+            return data.get(key);
+        }else {
+            System.out.println("Такого ключа в Text не существует!");  //для отладки
+            return "";
+        }
     }
 
     public static String[] getMonths(){
@@ -59,6 +64,9 @@ final public class Text {
         data.put("ERROR_NO_BASE_CURRENCY", "Необходимы базовая валюта."
                                         + " Установите сначала этот параметр в другой валюте,"
                                         + "  потом он снимется в этой автоматически.");
+
+        data.put("YES", "Да");
+        data.put("NO", "Нет");
 
     }
 }
