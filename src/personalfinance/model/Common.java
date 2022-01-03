@@ -1,6 +1,8 @@
 package personalfinance.model;
 
-abstract public class Common {
+import personalfinance.saveload.SaveData;
+
+abstract public class  Common {
     public String getValueForComboBox(){
         return null;
     }
@@ -8,13 +10,13 @@ abstract public class Common {
     public Common() {
     }
 
-    public void postAdd(){
+    public void postAdd(SaveData saveData){
 
     }
-    public void postEdit(){
+    public void postEdit(SaveData saveData){
 
     }
-    public void postRemove(){
+    public void postRemove(SaveData saveData){
 
     }
 }

@@ -1,6 +1,8 @@
 package personalfinance.model;
 
+import com.sun.org.apache.bcel.internal.generic.ACONST_NULL;
 import personalfinance.exception.ModelException;
+import personalfinance.saveload.SaveData;
 
 import java.util.Date;
 
@@ -91,5 +93,24 @@ public class Transaction extends Common{
                 '}';
     }
 
+    @Override
+    public void postAdd(SaveData saveData) {
+        setAmount(saveData);
+    }
 
+    @Override
+    public void postEdit(SaveData saveData) {
+        setAmount(saveData);
+    }
+
+    @Override
+    public void postRemove(SaveData saveData) {
+        setAmount(saveData);
+    }
+
+    public void setAmount(SaveData saveData){
+        for (Account account : saveData.getAccounts()){
+            account.setAmountFromTransactionsAndTransfer(saveData.getTransactions(), saveData.getTransfers());
+        }
+    }
 }

@@ -1,10 +1,11 @@
 package personalfinance.model;
 
 import personalfinance.exception.ModelException;
+import personalfinance.saveload.SaveData;
 
 import java.util.Date;
 
-public class Transfer {
+public class Transfer extends Common{
     private Account fromAccount;
     private Account toAccount;
     private double fromAmount;
@@ -101,5 +102,26 @@ public class Transfer {
                 ", notice='" + notice + '\'' +
                 ", date=" + date +
                 '}';
+    }
+
+    @Override
+    public void postAdd(SaveData saveData) {
+        setAmount(saveData);
+    }
+
+    @Override
+    public void postEdit(SaveData saveData) {
+        setAmount(saveData);
+    }
+
+    @Override
+    public void postRemove(SaveData saveData) {
+        setAmount(saveData);
+    }
+
+    public void setAmount(SaveData saveData){
+        for (Account account : saveData.getAccounts()){
+            account.setAmountFromTransactionsAndTransfer(saveData.getTransactions(), saveData.getTransfers());
+        }
     }
 }
