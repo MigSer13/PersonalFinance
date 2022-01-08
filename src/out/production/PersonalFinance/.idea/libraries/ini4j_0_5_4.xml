@@ -2,6 +2,7 @@
   <library name="ini4j-0.5.4">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../Создание крупного приложения Java/Создание крупного проекта на Java с нуля/Content/files/source/ini4j-0.5.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Создание крупного приложения Java/Создание крупного проекта на Java с нуля/Content/files/source/javax.xml.bind.jar/javax.xml.bind.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

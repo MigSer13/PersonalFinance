@@ -1,11 +1,11 @@
 package personalfinance.saveload;
 
-import com.sun.org.apache.bcel.internal.generic.PUSH;
 import personalfinance.exception.ModelException;
 import personalfinance.model.*;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 
 public final class SaveData {
@@ -169,18 +169,18 @@ public final class SaveData {
             throw new ModelException(ModelException.IS_EXIST);
         }
         ref.add(common);
-        ref.postAdd(this);
+        common.postAdd(this);
         sort();
         saved = false;
     }
-    public void edit(Common oldC, Common newCommom) throws ModelException {
+    public void edit(Common oldC, Common newCommon) throws ModelException {
         List ref = getRef(oldC);
-        if (ref.contains(newCommom) && oldC != ref.get(ref.indexOf(newCommom ))){
+        if (ref.contains(newCommon) && oldC != ref.get(ref.indexOf(newCommon))){
             throw new ModelException(ModelException.IS_EXIST);
         }
-        ref.set(ref.indexOf(oldC), newCommom);
+        ref.set(ref.indexOf(oldC), newCommon);
         oldCommon = oldC;
-        newCommom.postAdd(this);
+        newCommon.postAdd(this);
         sort();
         saved = false;
     }
@@ -214,5 +214,16 @@ public final class SaveData {
             return transfers;
         }
         return null;
+    }
+
+    public void updateCurrencies() throws Exception {
+        HashMap<String, Double> rates = RateCurrency.getRate(getBaseCurrency());
+        for (Currency currency : currencies) {
+            currency.setRate(rates.get(currency.getCode()));
+        }
+        for (Account account : accounts) {
+            account.getCurrency().setRate(rates.get(account.getCurrency().getCode()));
+        }
+
     }
 }

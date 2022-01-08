@@ -1,6 +1,5 @@
 package personalfinance.model;
 
-import com.sun.org.apache.bcel.internal.generic.ACONST_NULL;
 import personalfinance.exception.ModelException;
 import personalfinance.saveload.SaveData;
 
