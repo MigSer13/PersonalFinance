@@ -1,5 +1,6 @@
 package personalfinance.settings;
 
+import javax.swing.*;
 import java.util.HashMap;
 
 final public class Text {
@@ -10,7 +11,7 @@ final public class Text {
         if (data.containsKey(key)) {
             return data.get(key);
         }else {
-            System.out.println("Такого ключа в Text не существует!");  //для отладки
+            System.out.println("Такого ключа в Text не существует! - " + key);  //для отладки
             return "";
         }
     }
@@ -87,11 +88,44 @@ final public class Text {
         data.put("MENU_VIEW_ACCOUNTS", "Счета");
         data.put("MENU_VIEW_ARTICLES", "Статьи");
         data.put("MENU_VIEW_CURRENCIES", "Валюты");
-        data.put("MENU_VIEW_TRANSACTION", "Транзакции");
+        data.put("MENU_VIEW_TRANSACTIONS", "Транзакции");
         data.put("MENU_VIEW_TRANSFERS", "Переводы");
         data.put("MENU_VIEW_STATISTICS", "Статистика");
 
         data.put("MENU_HELP_ABOUT", "О программе");
+
+        data.put("TOOLBAR_OVERVIEW", "Обзор");
+        data.put("TOOLBAR_ACCOUNTS", "Счета");
+        data.put("TOOLBAR_ARTICLES", "Статьи");
+        data.put("TOOLBAR_TRANSACTIONS", "Транзакции");
+        data.put("TOOLBAR_TRANSFERS", "Переводы");
+        data.put("TOOLBAR_CURRENCIES", "Валюты");
+        data.put("TOOLBAR_STATISTICS", "Статистика");
+
+        data.put("ADD", "Добавить");
+        data.put("EDIT", "Изменить");
+        data.put("DELETE", "Удалить");
+
+        data.put("TODAY", "Сегодня");
+
+        data.put("FC_OPEN", "Открыть");
+        data.put("FC_SAVE", "Сохранить");
+        data.put("FC_CANCEL", "Отмена");
+        data.put("FC_LOOK", " Папка:");
+        data.put("FC_NAME_FILE", "Имя файла:");
+        data.put("FC_TYPE_FILE", "Тип файла:");
+        data.put("FC_UP", "Вверх");
+        data.put("FC_HOME", "Домашняя директория");
+        data.put("FC_NEW_DIRECTORY", "Новая папка");
+        data.put("FC_LIST", "Список");
+        data.put("FC_TABLE", "Таблица");
+        data.put("FC_NAME", "Имя");
+        data.put("FC_SIZE", "Размер");
+        data.put("FC_TYPE", "Тип");
+        data.put("FC_DATE", "Дата");
+        data.put("FC_ATTR", "Атрибуты");
+        data.put("FC_ALL_FILTER", "Все файлы");
+
 
     }
 }

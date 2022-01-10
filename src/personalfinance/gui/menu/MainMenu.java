@@ -54,7 +54,7 @@ public class MainMenu extends JMenuBar implements Refresh, EnableEditDelete {
         addMenuItem(view, Text.get("MENU_VIEW_ACCOUNTS"), Style.ICON_MENU_VIEW_ACCOUNTS, HandlerCode.MENU_VIEW_ACCOUNTS);
         addMenuItem(view, Text.get("MENU_VIEW_ARTICLES"), Style.ICON_MENU_VIEW_ARTICLES, HandlerCode.MENU_VIEW_ARTICLES);
         addMenuItem(view, Text.get("MENU_VIEW_CURRENCIES"), Style.ICON_MENU_VIEW_CURRENCIES, HandlerCode.MENU_VIEW_CURRENCIES);
-        addMenuItem(view, Text.get("MENU_VIEW_TRANSACTION"), Style.ICON_MENU_VIEW_TRANSACTION, HandlerCode.MENU_VIEW_TRANSACTION);
+        addMenuItem(view, Text.get("MENU_VIEW_TRANSACTIONS"), Style.ICON_MENU_VIEW_TRANSACTIONS, HandlerCode.MENU_VIEW_TRANSACTIONS);
         addMenuItem(view, Text.get("MENU_VIEW_TRANSFERS"), Style.ICON_MENU_VIEW_TRANSFERS, HandlerCode.MENU_VIEW_TRANSFERS);
         addMenuItem(view, Text.get("MENU_VIEW_STATISTICS"), Style.ICON_MENU_VIEW_STATISTICS, HandlerCode.MENU_VIEW_STATISTICS);
 
