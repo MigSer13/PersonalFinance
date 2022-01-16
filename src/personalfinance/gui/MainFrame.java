@@ -1,5 +1,8 @@
 package personalfinance.gui;
 
+import personalfinance.gui.dialog.AboutDialog;
+import personalfinance.gui.dialog.AccountAddEditDialog;
+import personalfinance.gui.dialog.ErrorDialog;
 import personalfinance.gui.menu.MainMenu;
 import personalfinance.gui.toolbar.MainToolbar;
 import personalfinance.settings.Style;
@@ -17,8 +20,12 @@ public class MainFrame extends JFrame implements Refresh{
     public MainFrame() {
         super(Text.get("PROGRAMM_NAME"));
 
-        MainFileChooser fileChooser = new MainFileChooser(this);
-        fileChooser.save();
+
+        new AccountAddEditDialog(this).showDialog();
+//        new AboutDialog().setVisible(true);
+//        ErrorDialog.show(this, "Проверка ");
+//        MainFileChooser fileChooser = new MainFileChooser(this);
+//        fileChooser.save();
 
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

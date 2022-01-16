@@ -1,6 +1,7 @@
 package personalfinance.settings;
 
 import javax.swing.*;
+import java.util.Calendar;
 import java.util.HashMap;
 
 final public class Text {
@@ -105,6 +106,7 @@ final public class Text {
         data.put("ADD", "Добавить");
         data.put("EDIT", "Изменить");
         data.put("DELETE", "Удалить");
+        data.put("CANCEL", "Отмена");
 
         data.put("TODAY", "Сегодня");
 
@@ -126,6 +128,20 @@ final public class Text {
         data.put("FC_ATTR", "Атрибуты");
         data.put("FC_ALL_FILTER", "Все файлы");
 
+        data.put("ERROR", "Ошибка");
 
+        data.put("DIALOG_ABOUT_TITLE", "О программе");
+        data.put("ABOUT", "<body style='font-size: 120%; text-align: center; width: 350px; '>" +
+                "<h1>Домашняя бухгалтерия</h1><p><img src=file:'images/main.png'/></p>"
+                + "<p>Программа создана в январе 2022"
+                + "<br />\"(пример создания приложения на java) \""
+                + "<br /><a style='font-weight: bold;' href='https://srs.myrusakov.ru/javaproject'>https://srs.myrusakov.ru/javaproject</a></p>"
+                + "<p>Copyright " + Calendar.getInstance().get(Calendar.YEAR) + " </p>"
+                + "</body>");
+
+
+        data.put("LABEL_TITLE", "Название");
+        data.put("LABEL_START_AMOUNT", "Начальный баланс");
+        data.put("LABEL_CURRENCY", "Валюта");
     }
 }
